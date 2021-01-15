@@ -30,5 +30,11 @@
     <ClCompile Include="part2_ch3_모험가길드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part2_구현_예제_상하좌우.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_구현_예제_시각.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
