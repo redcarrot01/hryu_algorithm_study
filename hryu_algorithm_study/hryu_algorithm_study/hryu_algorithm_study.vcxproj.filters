@@ -45,5 +45,11 @@
     <ClCompile Include="part2_구현_게임개발.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part2_dfs_bfs_예제_dfs.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_dfs_bfs_음료수얼려먹.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
