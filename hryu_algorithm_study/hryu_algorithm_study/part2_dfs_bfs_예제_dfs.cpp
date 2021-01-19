@@ -7,6 +7,8 @@ using namespace std;
 bool visited[9];
 vector<int> graph[9];
 
+// 스택은 리스트 자료형 이용
+
 // dfs 함수 정의
 void dfs(int x) {
 	// 현재 노드를 방문 처리

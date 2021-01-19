@@ -54,5 +54,8 @@
     <ClCompile Include="part2_dfs_bfs_예제_bfs.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ch2_dfs_bfs_미로탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
