@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="part2_dfs_bfs_예제_bfs.cpp" />
     <ClCompile Include="part2_dfs_bfs_음료수얼려먹.cpp" />
     <ClCompile Include="part2_dfs_bfs_예제_dfs.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
