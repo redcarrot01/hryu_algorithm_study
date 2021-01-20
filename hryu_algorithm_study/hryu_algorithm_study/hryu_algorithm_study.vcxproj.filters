@@ -18,18 +18,6 @@
     <ClCompile Include="test.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="part2_ch3_연습문제.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="part2_ch3_1이될때까지.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="part2_ch3_곱하기혹은더하기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="part2_ch3_모험가길드.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="part2_구현_예제_상하좌우.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -61,6 +49,21 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="part2_정렬_예제_삽입정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_정렬_예제_퀵정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_그리디_1이될때까지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_그리디_곱하기혹은더하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_그리디_모험가길드.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="part2_그리디_연습문제.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
