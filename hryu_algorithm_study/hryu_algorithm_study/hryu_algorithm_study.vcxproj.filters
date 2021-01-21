@@ -72,5 +72,8 @@
     <ClCompile Include="part2_정렬_두배열의원소교체1.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part2_정렬_위에서아래로.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
