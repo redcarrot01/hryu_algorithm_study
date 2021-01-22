@@ -78,5 +78,8 @@
     <ClCompile Include="part2_정렬_성적이낮은순서대로출력하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part2_이진탐색_예제_반복문이용한이진탐색.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
