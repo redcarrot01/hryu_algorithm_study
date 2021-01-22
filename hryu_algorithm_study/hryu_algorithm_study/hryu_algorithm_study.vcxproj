@@ -172,13 +172,16 @@
     <ClCompile Include="part2_구현_왕실의나이트.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="part2_이진탐색_떡볶이떡만들기.cpp" />
     <ClCompile Include="part2_이진탐색_예제_반복문이용한이진탐색.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="part2_이진탐색_예제_순차탐색.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="part2_이진탐색_예제_재귀함수이용한이진탐색.cpp" />
+    <ClCompile Include="part2_이진탐색_예제_재귀함수이용한이진탐색.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="part2_정렬_두배열의원소교체1.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
