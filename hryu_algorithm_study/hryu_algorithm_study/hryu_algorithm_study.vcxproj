@@ -175,6 +175,10 @@
     <ClCompile Include="part2_이진탐색_떡볶이떡만들기.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="part2_이진탐색_부품찾기_set.cpp" />
+    <ClCompile Include="part2_이진탐색_부품찾기_계수정렬.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="part2_이진탐색_예제_반복문이용한이진탐색.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
