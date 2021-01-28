@@ -126,5 +126,8 @@
     <ClCompile Include="part3_그리디_볼링공고르기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part3_그리디_만들수없는금액.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
