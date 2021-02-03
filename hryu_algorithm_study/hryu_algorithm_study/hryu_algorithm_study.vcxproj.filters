@@ -132,6 +132,9 @@
     <ClCompile Include="part3_구현_럭키스트레이트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part3_구현_문자열압축.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
