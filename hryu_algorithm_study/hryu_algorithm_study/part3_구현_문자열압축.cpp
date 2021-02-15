@@ -24,11 +24,12 @@ using namespace std;
 int solution(string s) {
 	int len = s.size(); //문자열 전체 길이
 	int answer = len; // 처음 문자열 상태
-	int n = len / 2; 
+	int n = len / 2; // 단위 최대 길이
 
 	//i개 단위로 잘라서 압축
 	for (int i = 1; i <= n; i++) {
 		int len = s.length();
+
 		// i개 단위로 잘라서 압축한 뒤 만들어지는 문자열
 		string result = "";
 
