@@ -147,6 +147,9 @@
     <ClCompile Include="part3_정렬_카드정렬하기.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="part3_이진탐색_고정점찾기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
