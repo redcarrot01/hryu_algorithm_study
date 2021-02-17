@@ -17,34 +17,6 @@ int max(int a, int b) {
 	return a > b ? a : b;
 }
 
-//int solution(vector<vector<int>> tri) {
-//	//예외 사례, 초기값을 설정
-//	answer = d[0][0] = tri[0][0];
-//	// 삼각형 높이
-//	height = (int)tri.size();
-//
-//	// 맨 위층의 한 점은 위에서 예외처리
-//	for (int i = 1; i < height; i++) {
-//		for (int j = 0; j <= i; j++) {
-//			// 삼각형 왼쪽 끝
-//			if (j == 0) {
-//				d[i][j] = d[i - 1][j] + tri[i][j];
-//			}
-//			// 삼각형 오른쪽 끝
-//			else if (j == i) {
-//				d[i][j] = d[i - 1][j - 1] + tri[i][j];
-//			}
-//			// 삼각형 왼쪽 , 오른쪽 끝이 아닌 내부
-//			else {
-//				d[i][j] = max(d[i - 1][j - 1], d[i - 1][j]) + tri[i][j];
-//			}
-//			// 갱신
-//			answer = max(answer, d[i][j]);
-//		}
-//
-//	}
-//	return answer;
-//}
 int main() {
 	cin >> n;
 	for (int i = 0; i < n; i++) {
