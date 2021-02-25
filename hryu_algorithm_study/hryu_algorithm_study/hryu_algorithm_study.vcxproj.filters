@@ -168,6 +168,9 @@
     <ClCompile Include="part2_최단경로_예제_개선된다익스트라.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="0225_이코테_그리디리뷰.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
