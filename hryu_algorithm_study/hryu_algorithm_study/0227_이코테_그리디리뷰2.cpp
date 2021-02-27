@@ -161,3 +161,4 @@ food_times 3 ,1, 2    k 5    result 1
 //    return result[(k - summary) % length].second;// 위 알고리즘에서 summary는 k 보다 작게 
 //
 //}
+///
