@@ -304,52 +304,95 @@ a 1~100
 1 0 1 0  ->	 35 17
 
 */
+//
+//# include <iostream>
+//using namespace std;
+//
+//int N; // n 2~11
+//int operands[11];
+//int operators[4];
+//int mymin = 1000000001;
+//int mymax = -1000000001;
+//
+//// 재귀로
+//void get_answer(int result, int idx) {
+//	if (idx == N) { // 연산자 다 사용
+//		if (result > mymax) mymax = result;
+//		if (result < mymin) mymin = result;
+//	}
+//
+//	for (int i = 0; i < 4; i++) {
+//		if (operators[i] > 0) { // 그 인덱스에 연산자 살아있다면
+//			operators[i]--; // 연산자 사용하면 한개 줄여줘
+//			if (i == 0)
+//				get_answer(result + operands[idx], idx + 1);
+//			else if (i == 1)
+//				get_answer(result - operands[idx], idx + 1);
+//			else if (i == 2)
+//				get_answer(result * operands[idx], idx + 1);
+//			else
+//				get_answer(result / operands[idx], idx + 1);
+//
+//			operators[i]++; // 다른 연산자 사용할 것이므로 
+//			// 아까 줄였던 연산자 개수 늘려줌
+//		}
+//	}
+//	return;
+//}
+//
+//int main() {
+//	cin >> N;
+//	for (int i = 0; i < N; i++) {
+//		cin >> operands[i];
+//	}
+//	for (int i = 0; i < 4; i++) {
+//		cin >> operators[i];
+//	}
+//	get_answer(operands[0], 1); // idx는 연산자 개수, 1개부터 시작이니까
+//	cout << mymax << '\n';
+//	cout << mymin << '\n';
+//
+//}
 
-# include <iostream>
-using namespace std;
 
-int N; // n 2~11
-int operands[11];
-int operators[4];
-int mymin = 1000000001;
-int mymax = -1000000001;
-
-// 재귀로
-void get_answer(int result, int idx) {
-	if (idx == N) { // 연산자 다 사용
-		if (result > mymax) mymax = result;
-		if (result < mymin) mymin = result;
-	}
-
-	for (int i = 0; i < 4; i++) {
-		if (operators[i] > 0) { // 그 인덱스에 연산자 살아있다면
-			operators[i]--; // 연산자 사용하면 한개 줄여줘
-			if (i == 0)
-				get_answer(result + operands[idx], idx + 1);
-			else if (i == 1)
-				get_answer(result - operands[idx], idx + 1);
-			else if (i == 2)
-				get_answer(result * operands[idx], idx + 1);
-			else
-				get_answer(result / operands[idx], idx + 1);
-
-			operators[i]++; // 다른 연산자 사용할 것이므로 
-			// 아까 줄였던 연산자 개수 늘려줌
-		}
-	}
-	return;
-}
-
-int main() {
-	cin >> N;
-	for (int i = 0; i < N; i++) {
-		cin >> operands[i];
-	}
-	for (int i = 0; i < 4; i++) {
-		cin >> operators[i];
-	}
-	get_answer(operands[0], 1); // idx는 연산자 개수, 1개부터 시작이니까
-	cout << mymax << '\n';
-	cout << mymin << '\n';
-
-}
+// N-QUEEN 백준 9663 백트래킹 문제
+//# include <stdio.h>
+//# include <iostream>
+//
+//int cnt = 0;
+//int n;
+//int board[15];
+//
+//// 유망한지 판단하는 함수
+//int promising(int cdx) {
+//
+//	// 같은 열이면 안되고, 대각선상에 있어서도 안 된다
+//	for (int i = 0; i < cdx; i++) { // 대각선상 : cdx 행 - 앞 행 == cdx 열 -  앞 행의 열
+//		if (board[cdx] == board[i] || cdx - i == abs(board[cdx] - board[i]))
+//			return 0;
+//	}	
+//	return 1;
+//}
+//// 백트래킹 알고리즘 수행
+//void nqueen(int cdx) {
+//
+//	// cdx가 마지막 행까지 수행하고 여기까지 오면 찾기 완료
+//	if (cdx == n)
+//	{
+//		cnt++;
+//		return;
+//	}
+//	for (int i = 0; i < n; i++) {
+//		board[cdx] = i;  //cdx번째 행, i번째 열에 퀸을 놓아본다
+//		// 이후 그 행에 둔 것에 대한 유망성 판단
+//		if (promising(cdx)) // 그자리에 두어도 오케이라면
+//			nqueen(cdx + 1); // 그 다음행에 퀸 놓기 시도
+//
+//	}
+//
+//}
+//int main() {
+//	scanf_s("%d", &n);
+//	nqueen(0);
+//	printf("%d", cnt);
+//}
