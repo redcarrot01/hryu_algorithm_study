@@ -207,7 +207,7 @@
 
 - dfs_bfs
 	- 연산자끼워넣기
-	- n-queen
+	- n-queen(예제_백트래킹, not 이코테)
 ## part 2&3
 
 | part 2&3      | 그리디   | 구현 | DFS/BFS  | 정렬               |
