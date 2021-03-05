@@ -171,94 +171,155 @@ bfs.dfs를 통해 바이러스가 있는 지점에서 바이러스 모두 퍼뜨린 후,
 //  연구소 나중에 다시
 // 연구소 2번째 버전 풀이
 
-# include <iostream>
-# include <algorithm>
+//# include <iostream>
+//# include <algorithm>
+//
+//using namespace std;
+//
+//int n, m;
+//int arr[8][8]; //초기 맵 배열
+//int temp[8][8]; // 벽 세운 후 맵 배열
+//
+//// 4가지 이동 방향에 대한 배열 상 하 우 좌
+//int dy[] = { -1, 0, 1, 0 };
+//int dx[] = { 0, 1, 0, -1 };
+//
+//int result;
+//
+//// 깊이 우선 탐색 이용해 각 바이러스가 사방으로 퍼지도록 하기
+//void virus(int x, int y) {
+//	for (int i = 0; i < 4; i++) {
+//		int nx = x + dx[i];
+//		int ny = y + dy[i];
+//
+//		// 상하좌우 중 바이러스 퍼질 수 있는 경우
+//		if (nx >= 0 & nx < n && ny >= 0 && ny < m) {
+//			if (temp[nx][ny] == 0) {
+//				// 해당 위치에 바이러스 배치하고 다시 재귀 수행
+//				temp[nx][ny] = 2;
+//				virus(nx, ny);
+//			}
+//		}
+//	}
+//}
+//// 현재 맵에서 안전 영역 크기 계산
+//int getScore() {
+//	int score = 0;
+//	for (int i = 0; i < n; i++) {
+//		for (int j = 0; j < m; j++) {
+//			if (temp[i][j] == 0)
+//				score += 1;
+//		}
+//	}
+//	return score;
+//}
+//
+//// 깊이 우선 탐색을 이용해 울타리 설치하면서, 매번 안전영역 크기 계산
+//void dfs(int cnt) {
+//	// 울타리가 3개 설치된 경우, 복사본 맵에 복사
+//	if (cnt == 3) {
+//		for (int i = 0; i < n; i++) {
+//			for (int j = 0; j < m; j++) {
+//				temp[i][j] = arr[i][j];
+//			}
+//		}
+//		// 각 바이러스의 위치에서 전파 진행
+//		for (int i = 0; i < n; i++) {
+//			for (int j = 0; j < m; j++) {
+//				if (temp[i][j] == 2)
+//					virus(i, j);
+//			}
+//		}
+//
+//		// 안전영역 최대값 계산
+//		result = max(result, getScore());
+//		return;
+//	}
+//
+//
+//	// 빈 공간에 울타리 설치
+//	for (int i = 0; i < n; i++) {
+//		for (int j = 0; j < m; j++) {
+//			if (arr[i][j] == 0) {
+//				arr[i][j] = 1;
+//				cnt += 1;
+//				dfs(cnt);
+//				arr[i][j] = 0; //dfs 다 돌리고 나서 초기화
+//				cnt -= 1; // 초기화 해주어야
+//			}
+//		}
+//	}
+//}
+//
+//int main() {
+//	cin >> n >> m;
+//
+//	for (int i = 0; i < n; i++) {
+//		for (int j = 0; j < m; j++) {
+//			cin >> arr[i][j];
+//		}
+//	}
+//	dfs(0);
+//	cout << result << '\n';
+//}
 
+// 특정거리의 도시찾기
+
+// bfs => 최단거리, 큐
+// 시작지점과 연결되어 있는 모든 정점 방문
+
+# include <iostream>
+# include <vector>
+# include <queue>
+# include <algorithm>
 using namespace std;
 
-int n, m;
-int arr[8][8]; //초기 맵 배열
-int temp[8][8]; // 벽 세운 후 맵 배열
-
-// 4가지 이동 방향에 대한 배열 상 하 우 좌
-int dy[] = { -1, 0, 1, 0 };
-int dx[] = { 0, 1, 0, -1 };
-
-int result;
-
-// 깊이 우선 탐색 이용해 각 바이러스가 사방으로 퍼지도록 하기
-void virus(int x, int y) {
-	for (int i = 0; i < 4; i++) {
-		int nx = x + dx[i];
-		int ny = y + dy[i];
-
-		// 상하좌우 중 바이러스 퍼질 수 있는 경우
-		if (nx >= 0 & nx < n && ny >= 0 && ny < m) {
-			if (temp[nx][ny] == 0) {
-				// 해당 위치에 바이러스 배치하고 다시 재귀 수행
-				temp[nx][ny] = 2;
-				virus(nx, ny);
-			}
-		}
-	}
-}
-// 현재 맵에서 안전 영역 크기 계산
-int getScore() {
-	int score = 0;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if (temp[i][j] == 0)
-				score += 1;
-		}
-	}
-	return score;
-}
-
-// 깊이 우선 탐색을 이용해 울타리 설치하면서, 매번 안전영역 크기 계산
-void dfs(int cnt) {
-	// 울타리가 3개 설치된 경우, 복사본 맵에 복사
-	if (cnt == 3) {
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				temp[i][j] = arr[i][j];
-			}
-		}
-		// 각 바이러스의 위치에서 전파 진행
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < m; j++) {
-				if (temp[i][j] == 2)
-					virus(i, j);
-			}
-		}
-
-		// 안전영역 최대값 계산
-		result = max(result, getScore());
-		return;
-	}
-
-
-	// 빈 공간에 울타리 설치
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			if (arr[i][j] == 0) {
-				arr[i][j] = 1;
-				cnt += 1;
-				dfs(cnt);
-				arr[i][j] = 0; //dfs 다 돌리고 나서 초기화
-				cnt -= 1; // 초기화 해주어야
-			}
-		}
-	}
-}
+// 도시 개수, 도로 개수, 거리 정보, 출발 도시 번호
+int n, m, k, x;
+// 간선 정보(1과 2가 연결되어있다 이런,,)
+vector<int> graph[300001];
+// 모든 도시에 대한 최단 거리 초기화, 방문 표시할 벡터임
+vector<int> d(300001, -1);
 
 int main() {
-	cin >> n >> m;
+	cin >> n >> m >> k >> x;
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cin >> arr[i][j];
+	for (int i = 0; i < m; i++) {
+		int a, b;
+		cin >> a >> b;
+		graph[a].push_back(b);
+	}
+
+	// 출발 도시까지의 거리는 0으로 설정
+	d[x] = 0;
+
+	// 너비 우선 탐색 수행
+	queue<int> q; // 탐색 수행할 노드(인접 노드) 큐에 삽입할거임
+	q.push(x);
+	while (!q.empty()) {
+		int now = q.front();
+		q.pop();
+
+		// 현재도시에서 이동할 수 있는 모든 도시 확인
+		for (int i = 0; i < graph[now].size(); i++) {
+			int nextNode = graph[now][i];
+
+			// 아직 방문 안한 도시라면
+			if (d[nextNode] == -1) {
+				// 최단 거리 갱신
+				d[nextNode] = d[now] + 1; //일단 출발도시 거리는 0이므로 0+1임
+				q.push(nextNode);
+			}
 		}
 	}
-	dfs(0);
-	cout << result << '\n';
+	// 최단거리 k인 모든 도시의 번호를 오름차순
+	bool check = false; // 초기화 false 그 이유는 최단거리 k 가 없다면 -1 출력하기 위함
+	for (int i = 1; i <= n; i++) { //노드가 0번인건 없으니까 1~n까지임
+		if (d[i] == k) {
+			cout << i << '\n';
+			check = true;
+		}
+	}
+	// 최단거리 k인 도시 없다면 -1 check ==false 
+	if (!check) cout << -1 << '\n';
 }
